@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-09T12:43:53.285Z",
+    "end": "2024-05-09T12:44:41.726Z",
+    "duration": 48441,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d4254ba7-8c42-4af6-9c68-ef9ff64d2fee",
+      "title": "",
+      "fullFile": "cypress\\e2e\\User-Flow-Test.cy.js",
+      "file": "cypress\\e2e\\User-Flow-Test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a826dccf-7665-4923-af74-db8bbf5d769f",
+          "title": "User Flow Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate user can complete an entire flow of shopping",
+              "fullTitle": "User Flow Test Validate user can complete an entire flow of shopping",
+              "timedOut": null,
+              "duration": 44898,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.goToWebSite();\ncy.window().scrollTo('center');\n_HomePage.default.clickViewProduct(data.productName);\n_ProductPage.default.getProductTitle().should('have.text', data.productName);\n_ProductPage.default.inputQuantity(data.quantity);\n_ProductPage.default.clickAddToCart();\n_ProductPage.default.getProductAddedMessage().should('have.text', 'Your product has been added to cart.');\n_ProductPage.default.clickViewCartLink();\n_CartPage.default.getCartDescriptionProduct().should('have.text', data.productName);\n_CartPage.default.getQuantity().should('have.text', data.quantity);\n_CartPage.default.clickCheckOutButton();\n_CartPage.default.clickRegisterLoginLink();\n_LoginPage.default.inputSignUpName(data.name);\n_LoginPage.default.inputSignUpEmailAddress(email);\n_LoginPage.default.clickSignUpButton();\n_AccountInformationPage.default.selectMrTitle();\n_AccountInformationPage.default.inputPassword(data.password);\n_AccountInformationPage.default.checkNewsLetter();\n_AccountInformationPage.default.selectDateBirthday(data.birthday[0], data.birthday[1], data.birthday[2]);\n_AccountInformationPage.default.inputFirstName(data.name);\n_AccountInformationPage.default.inputLastName(data.lastname);\n_AccountInformationPage.default.inputCompany(data.company);\n_AccountInformationPage.default.inputAddress(data.address);\n_AccountInformationPage.default.inputAddress2(data.address2);\n_AccountInformationPage.default.selectCountry(data.country);\n_AccountInformationPage.default.inputState(data.state);\n_AccountInformationPage.default.inputCity(data.city);\n_AccountInformationPage.default.inputZipCode(data.zipCode);\n_AccountInformationPage.default.inputMobileNumber(data.mobileNumber);\n_AccountInformationPage.default.clickCreateAccountButton();\n_ConfirmationPage.default.getAccountCreatedMessage().should(\"have.text\", \"Account Created!\");\ncy.continueButton();\ncy.contains(\"Logged in as \" + name); //Verify that the user register is logged\ncy.goToCart();\n_CartPage.default.clickCheckOutButton();\n//Assertions to verify delivery and billing data\n_CheckOutPage.default.getDeliveryName().should(\"contain\", data.name + \" \" + data.lastname);\n_CheckOutPage.default.getDeliveryCompany().should(\"contain\", data.company);\n_CheckOutPage.default.getDeliveryAddress().should(\"contain\", data.address);\n_CheckOutPage.default.getDeliveryCountry().should(\"contain\", data.country);\n_CheckOutPage.default.getInvoiceName().should(\"contain\", data.name + \" \" + data.lastname);\n_CheckOutPage.default.getInvoiceCompany().should(\"contain\", data.company);\n_CheckOutPage.default.getInvoiceAddress().should(\"contain\", data.address);\n_CheckOutPage.default.getInvoiceCountry().should(\"contain\", data.country);\n_CheckOutPage.default.inputComment(\"Buy All\");\n_CheckOutPage.default.clickPlaceOrder();\n_PaymentPage.default.inputNameOnCard(data.name);\n_PaymentPage.default.inputCard(data.cardDetails[0]);\n_PaymentPage.default.inputCVC(data.cardDetails[1]);\n_PaymentPage.default.inputExpiryMonth(data.cardDetails[2]);\n_PaymentPage.default.inputExpiryYear(data.cardDetails[3]);\n_PaymentPage.default.clickPayConfirm();\n_PaymentPage.default.getOrderPlacedMessage().should('have.text', \"Order Placed!\");\ncy.continueButton();\ncy.logoutButton();\n_LoginPage.default.inputLoginEmailAddress(email);\n_LoginPage.default.inputLoginPassword(data.password);\n_LoginPage.default.clickLoginButton();\ncy.contains(\"Logged in as \" + data.name);\ncy.contactUsButton();\n_ContactPage.default.inputName(data.name);\n_ContactPage.default.inputEmail(email);\n_ContactPage.default.inputSubject(\"Subject of Test\");\n_ContactPage.default.inputMessage(\"This is a message\");\n_ContactPage.default.clickSubmit();\n_ContactPage.default.clickOKPopUP();\n_ContactPage.default.getSuccessMessage().should(\"have.text\", \"Success! Your details have been submitted successfully.\");\ncy.logoutButton();\ncy.url().should('eq', 'https://automationexercise.com/login');",
+              "err": {},
+              "uuid": "1946de05-cb1e-4715-8937-0cc186f8cc4e",
+              "parentUUID": "a826dccf-7665-4923-af74-db8bbf5d769f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1946de05-cb1e-4715-8937-0cc186f8cc4e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

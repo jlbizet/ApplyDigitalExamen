@@ -1,0 +1,28 @@
+{
+  "productName": "Summer White Top",
+  "email": "mnrqg@gmail.com",
+  "password": "password",
+  "quantity": "30",
+  "name": "John",
+  "birthday": [
+    "15",
+    "March",
+    "2015"
+  ],
+  "lastname": "Doe",
+  "company": "ApplyDigital",
+  "address": "8th Avenue",
+  "address2": "London Street",
+  "country": "Canada",
+  "state": "Toronto",
+  "city": "Ohio",
+  "zipCode": "11200",
+  "mobileNumber": "093986589",
+  "comment": "Any Comment",
+  "cardDetails": [
+    "598658965748",
+    "345",
+    "12",
+    "2025"
+  ]
+}
